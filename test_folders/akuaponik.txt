@@ -1,0 +1,88 @@
+Akuaponik, geleneksel akuakültür (akuatik canlılardan olan balık, kerevit, karides üretimi) ile hidroponiğin (topraksız tarım/ bitkilerin su ve besin eriyikleri ile beslenmesi) birleşmesi ile sürdürülebilir gıda üretim sistemi alternatiflerindendir. Akuakültürde zamanla suyun kirliliği balık için zararlı düzeye gelir. Bu su, hidroponik sistemde yetişen ürünlere, sistemi tıkayacak partiküller filtrelenip gönderilerek, bitkinin ihtiyaç duyduğu hayati besin maddelerini almasına, aynı zamanda akuakültürde yetişen canlıların suyunun temizlenerek kapalı devre simbiyotik yaşamın oluşmasını sağlar. Akuaponik terimi de akuakültür ve hidroponik kelimelerinin birleşiminden meydana gelmiştir.
+
+Aquaponik Sistemi kullanan işyerleri ve üretimin gerçekleştirildiği saha büyüklük bakımından değişiklik gösterir. Sistemler genellikle taze su içerir ancak sistemde beslenen balıkların ve yetiştirilen ürünlerin tuz ve demir gibi materyallere duyduğu ihtiyacın dengelenmesine dikkat edilmesi gerekmektedir. Akuaponik bilimin hâlâ erken bir aşamada olduğu söylenebilir.
+
+Akuakültür canlılarının suyun devir daim yapması akuaponik sistemin olmazsa olmazlarındandır.
+
+Sistemin İşleyişi
+Akuaponik sistem 2 ana kısımdan oluşur.
+
+Akuakültür Kısım: Canlılarının yaşayıp beslendiği, atık ürettiği kısım.
+Hidroponik Kısım: Sistemle daha önceden çimlendirilmiş sebze (lahana, kabak, salata, marul) ve meyve (çilek, domates) gibi bitkilerin yetiştiği kısım.
+Akuakültür Kısmı
+Bu kısım, hobi amaçlı kullanılan fanuslardan, balık üretim tesislerinin kullandığı büyük su haznelerine kadar değişen ölçülerde olabilmektedir. Hatta göl, gölet ya da benzer su birikintilerinde de akuakültür yapılabilir.
+
+Akuaponik Sistemde genellikle balık kullanıldığından sistemin büyüklüğü ve amacına göre hangi cins balığın üretiminin gerçekleştireleceğinin iyi araştırılması gerekmektedir. Üretilecek bitkilerin özellikle tuz ve demir ihtiyacıyla balıkların beslenmek için kullanacakları gıda ve ortam arasında bir denge olmalıdır.
+
+Yosunlanmayı engellemek için ise balıklar yarı karanlık ortamda tutulur.
+
+Hidroponik Kısmı
+Hidroponik kısımda bitkilerin bulunacağı ortam çok önemlidir. Hidroponik sistemde pek çok bitki yetişebileceği için, ortamın nasıl olması gerektiği konusunda tek bir varsayım yapmak doğru olmayacaktır. Yetiştirilecek bitki/ bitkilerin istedikleri ortam ısısı, tuz ve mineral ihtyaçları arasında büyük farkılıklar olmamalıdır.
+
+Akuaponik Sistemin İşleyişi
+Akuakültürde yetişen canlıların beslenmesi sonucu oluşan dışkı, çeşitli mikroorganizmalar ile birlikte bitki için oldukça besleyici yapı taşlarını da içerir. Bu su genellikle su pompası kullanılarak Hidroponik kısımda yetişen bitkilere gönderilir. Popmalama sisteminin tıkanmaması için Akuakültür kısmında bulunan yenmemiş yem, yosun ve diğer sistemi tıkaması muhtemel maddeler filtrelenmelidir.
+
+Hidroponik Sistem kendi içerisinde çeşitli şekillere ayrılır. Bitki kökleri torf, çakıl, kum, perlit, taş yünü, hidroton gibi genellikle pH değeri olmayan maddelere sarılır. Bazı sistemlerde köklerin bir kısmı bu materyallere sarılırken kökün bir kısmı ya da tamamı suyun içinde de olabilir.
+
+Çakıl Sebze Yatağı: Bu sistemde bitkiler, akuakültür sisteminden gelen su ile sulanır. Kökler ihtiyacı olan besin maddelerini akan sudan alırlar ve oksijen ihtiyaçlarını ise sebze yatağının boşalması sırasında (sifon sistemi ile) karşılarlar. Bu sistem sürekli çalışabildiği gibi belirli zamanlarda çalışacak şekilde de ayarlanabilir. Aynı zamanda biyolojik filtre görevi gören çakıl sebze yatakları hobi kullanıcıları arasında çok kullanılır.
+Derin Su Kültürü: Bu sistemde bitkiler strofor raftlarda yüzerken kökleri de tamamen suyun içerisindedir. Suyun drenejının gerekli olmadığı bu sistemde bitki köklerinin ışık almaması ve köklerin havalandırılması gerekmektedir. Aksi takdirde köklerde çürüme meydana gelebilir. Ticari işletmelerde kullanılan yöntemdir.
+Fitil Sistemi: Suyun emici bir madde vasıtası ile emilerek köklere taşındığı sistemdir.
+Besin Akıntı Kanalı: Bu sistemde kökler bir borunun içindedir ve borudan yavaş olarak besinli su akar. Zamanla bir film tabakası kanallarda oluşur ve bitkiyi besler.
+Damlama Sistemi: Sulama sistemine benzeyen bu yöntemde geleneksel tarımda kullanılan damlama methodu kullanırak bitki sulanır. Genelde dikey borular içine doldurulmuş çakıllar kullanılır ve borunun yanlarından açılan deliklere bitkiler ekilir. Su yukarıdan damlar ve bitkiyi besler.
+Sisleme Sistemi: Su bitki köklerine ince tanecikler olarak püskürtülür. Bu yöntemde köklerin besini daha iyi emdiği düşünülmektedir.
+Besinlerin ayrıştırılması
+Akuaponik sistemde besin maddeleri bakımından zengin olan atık, hidroponik üretim yataklarında bitkileri beslemek için kullanılır. Bu balık için de faydalıdır çünkü bitki kökleri ve kökbakterileri sudaki balık için zararlı olan atıkları ayrıştırır. Bu besinler balık dışkısı, yosun ve çürümüş balık yemlerinden oluşur ve bu balık için toksikiteyi arttırmak yerine, hidroponik sistemde kullanılan yapay besinlere organik bir alternatif olarak kullanılır.
+
+Daha sonra hidroponik yataklar biofiltre gibi davranır. Balık tankından gelen sudan amonyak, nitrat, nitrit ve fosforu ayrıştırır. Sonuç olarak balık için temiz olan su tekrar balık tankına pompalanır.
+
+Bitki kökleri ve bitki büyüme yatağı olarak kullanılan maddeler arasında yaşayan [azot bakterisi], besin döngüsünde öyle kritik bir rol onar ki onlar olmadan tüm sistem işlevselliğini kaybeder.
+
+Balık Türleri
+Akuakültüre uyumlu tatlı ve acı su balık türlerinden Tilapia, Levrek, Alabalık en tercih edilen türlerlendir. Kuzey Amerika'daki ticari işletmeler Akuaponik sistemlerini Tilapia üzerine kurmuşlardır.
+
+Su Kalitesi
+Balıkların yetiştirildiği tanklar iyi kalitede suya ihtiyaç duyar. Su kalitesini test eden kitler, Akuakültür malzeme teminini sağlayan şirketlerin demirbaşıdır. Su kalitesini belirleyen kritik etmenler çözülmüş oksijen, karbondioksit, amonyak, nitrat, nitrit, PH, klor olmaktadır.
+
+Balığın cinsi, büyüme hızı, beslenme hızı, hacmi ve diğer çevre etkenleri su kalitesinde hızlı değişimlere sebep olabilir. Sabit su kalitesinin korunmasına çalışılmalıdır.
+
+Yapılabilirlik
+Akuaponik Sistemin Avantajları:
+
+Düşük su kullanımı ile aynı miktarda bitki üretimi, geleneksel tarıma göre %2 su kullanımı ile mümkün olmaktadır.
+Doğal balık emülsiyonu ile organik gübreleme.
+Akuakültürde ortaya çıkan atığın bu sistemde değerlendirilmesi.
+Katlı sistem ile daha küçük alanlarda büyük miktarlarda tarım ürünü elde etme olanağı.
+Orgranik ürün satan pazar ya da marketin yakınına bu sistemin kurulması taşıma masraflarını azaltır.
+Pestisit kullanılmaması ve toprağa oranla nispeten daha temiz bir ortamda yetişen bitkilerin daha az yıkanma ihtiyacı duyması.
+Hidroponik yetiştiriciler balık gübresi içeren suyu organik gübre olarak kullanarak bitkilerin iyi bir şekilde büyümesini sağlar.
+Balık üreticileri hidroponik sistemi biofiltreleme için bir çözüm olarak görmekte.
+Sera içi üretim yapanlar Akuaponik sistemde üretiminin organik açıdan en saf yolu olduğunu düşünürler.
+Akuaponik taze sebze ve protein bakımından zengin balık üretimine izin verir.
+Akuaponik Sistemin Dezavantajları:
+
+Sistemin ilk kurulumunun maliyetli oluşu.
+Sistemin hatlarının kesin olarak oturmuş olmaması.
+Kaynak bilginin az oluşu.
+Pompanın çalışması için gereken enerji giderinin fazla olması.
+Pompanın tıkanması sonucu bitkilerin veya balıkların yaşamının tehlikeye girmesi.
+Balığı beslemek için kullanılacak yemin özenle seçilmesi.
+Suyun PH ve EC değerlerinin belirli değerlerde tutulması gerekmelidir.
+Sistemin Tarihi[1]
+6. yüzyıl Çin ziraat kitaplarında belirtildiğine göre pirinç gibi suya fazla ihtiyacı olan ürünlerin yetiştirilmesi bir şekilde çiftçileri yüksek besin içeren su arayışına sokmuş. Tabii balık ve pirincin baş yemek olduğu bir toplumda balıkların beslendiği göletlerden pirinç tarlalarına su aktarımı sırasında fark edilmiş ki balık dışkısı aslında iyi bir gübre ve pirincin miktarını da arttırıyor. Bir su kuşu olan ördek de bu denklemin içinde yer almış ve sistemli bir biçimde ördek, balık beslenen su göletlerinden pirinç tarlalarına su akıtılmış. Yayın, sazan gii çok yene balıklar ve ördek protein ihtiyacını karşılarken, pirinç de ana karbohidrat kaynağı olmuş.
+
+Çinlilerden bağımsız olarak Güney Amerika'da Aztekler sığ göl kenarlarında mevcut verimli çamurları kullanarak tarım yapmışlar. İsmine çinampa denilen bu sistem besin döngüsünden en iyi şekilde yararlanmayı sağlıyor. Azteklerin ana gıdalarından mısır, kabak, fasulye gibi çok su isteyen ürünler en iyi çinampalarda yetişiyor. Bugün dahi bu sistem Meksika'da tarım amaçlı uygulanıyor. Çinampa sığ göl kenarında mevcut alüvyonlu ve balık dışkısı ile gübrelenmiş balçığın belli noktalarda yığılarak adacıklar oluşturulması ve üzerinde tarım yapılmasıdır.
+
+Yakın geçmişe geldiğimizde popülasyonun artması, gıda ihtiyacının çoğalması, tarım yapılacak alanların ve tatlı su kaynaklarının azalması ile birlikte özellikle üniversite düzeyinde bu konulara çözümler aranmış. İlk olarak 1960 sonlarında John ve Nancy Todd, New Alchemy enstitüsünde bir sera inşa ederek Proto-Ark ismini verdikleri sürdürülebilir bir model oluşturmaya ve bir aileyi 1 yıl besleyecek bir sistem kurmaya çalıştılar. Balık ve sebzenin işbirlikteliği kullanılarak gıda ürettiler.
+
+Bu çalışmalardan esinlenen Mark McMurtry ve Prof. Doug Sanders IAVS (Integrated Aqua-Vegeculture System) adını verdikleri bir sistem kurarak balık ve sebze yetiştirme üzerine çalışmalar yaptılar. Sebze yatağı olarak kum dolu kaplar kullandılar. Hem suyu kum ile süzüyorlar hem de kum içinde süzülen balık dışkısını gübre olarak kullanıp sebze yetiştiriyorlardı. IAVS sistemleri bugün de hobiciler tarafından kullanılmaktadır ve konu hakkında Youtube'de video bulmak bile mümkün.
+
+1990’larda Tom ve Paula Sperano çifti filmlere konu olan Biosphere2 projesi ve yukarıda bahsettiğimiz mevcut çalışmaları modifiye ederek Bioponic sistemini geliştirdiler. Su kalitesini pek önemsemeyen güçlü ve tadı idare eden bir balık olan tilapya balığını kullanarak sebze yetiştirdiler. Sebze yataklarında biyolojik filtre görevi görecek kum, çakıl ve organik maddeleri de araştırdılar ve 1 cm ile 1.5 cm çapında çakıl veya volkanik taşların en iyi sonucu verdiğini buldular.
+
+Yapılan bunca araştırmanın sonucunda 1990 sonları 2000 başlarında Virgin Adaları üniversitesinde Dr. James Rakocy ve diğer akademisyenler balık ve sebze dengesi, azot ve diğer minerallerin hesaplanması, asidite, sıcaklık, balık yoğunluğu, optimum sebze miktarı gibi konularda pek çok araştırmaya imza attılar. Daha sonra Avustralyalı Dr. Wilson Lennard’da Dr. Rakocy ile beraber çalışmış ve akuaponik üzerine doktora tezi yapmıştır. İlk olarak ticari anlamda ürün yetiştiren kişi de Dr. Lennard’dır.
+
+Türkiye'de konu hakkında ilk kitap Gürkan Yeniçeri tarafından PDF formatında yazılmıştır. Ayrıca Bakuaponik isimli kuruluş Akdeniz Üniversitesi ile beraber ücretsiz eğitim veren kuruluştur. Her iki kaynağa da internet ve sosyal medya üzerinden ulaşılabilir.
+
+Şu anda Dünya üzerinde pek çok hobici forumlarda fikir alışverişi yaparken, ticari firmalar da organik standartlarında ürettikleri ürünlerini satmaktalar. Gıda üretiminde bizim için yeni olan bu teknoloji umarız Türkiye'de yayılır ve bir endüstri haline gelir.
+
+Aquaponics - Irımtüzen
+Gürkan Yeniçeri ayrıca İngilizce "aquaponics" terimini Türkçeye uyarlamaya çalışmış ve IRIMTÜZEN kelimesini üretmiştir. “Irım” GökTürkçe içinden su akan toprak parçası anlamına gelmektedir. “Tüzen” ise “düzen” kelimesinin atasıdır. Irımtüzen kapalı devre bir sistemde balık ve sebzelerin simbiyotik biçimde yetiştirilmesi işine verilen addır.

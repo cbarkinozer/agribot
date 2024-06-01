@@ -1,0 +1,5 @@
+.env
+agribot/*
+encoder/*
+__pycache__
+*.pkl

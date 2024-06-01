@@ -1,0 +1,42 @@
+Hidroponik, toprak kullanmadan su içinde mineral besin çözümleri kullanarak bitki yetiştirme yöntemidir. Hidrokültürün bir alt kümesidir. Kara bitkileri mineral besin solüsyonunda veya perlit, çakıl, mineral yünü, genişletilmiş kil ve hindistan cevizi kabuğu gibi nötr bir ortamda kendi kökleri ile yetiştirilebilir.
+
+Avantajları [kaynak belirtilmeli]
+Toprağa ihtiyaç duymadığı için toprağı verimsiz olan yerlerde de tarım yapılabilir.
+Su ihtiyacı azalır.
+Bitkilerin beslenme seviyeleri kontrol edilebilir böylece daha nitelikli deneyler yapılabilir.
+Kirlilik gibi etkenlerden etkilenilmez.
+Hasat kolaylığı sağlanır.
+Bitkiler daha sağlıklı büyür.
+Hidroponik sistemlerde kullanılan besinler balık dışkısı, ördek gübresi, kimyasal gübreler ya da yapay besin çözeltileri[1] gibi çok farklı kaynaklardan gelebilir.
+
+Hidroponik olarak asal ortamda yetiştirilen bitkiler, domates, biber, hıyar, marul, haşhaş ve Arabidopsis thaliana gibi model bitkileri kapsar.[2]
+
+Hidroponik az su kullanılarak tarım gibi iyi yanının yanında pek çok avantaj sağlar. 1 kg domates yetiştirmek için yaygın çiftçilik yöntemlerinde 400 litre su kullanmak gerekir; hidroponik kullanarak 70 litre ve aeroponik kullanarak sadece 20 litre su yeterlidir.[3] Üretime gerek duyulan su eksikliği yüzünden yeterli su olmayan ortamlarda böylece gıda maddesi yetiştirilir.[4]
+
+Teknikler
+Her ortam için başlıca iki çeşit vardır: alttan sulama ve üstten sulama. Çoğu hidroponik uygulamalarda plastik kaplar kullanılır ama beton, cam, metal ve ağaç gibi katı malzemeler de kullanılmaktadır. Kaplar, besin çözeltisinde yosun ve mantar büyümesini önlemek için ışığı geçirmemelidir. Bunun için bitki köklerini kapatacak şekilde kokopit, perlit, kaolin kili, pomza taşı gibi materyallerle doldurulabilir.
+
+Statik solüsyon kültürü
+
+Brooks, Alberta'daki güney Akuaponik serasının bitki çeşitlendirme merkezindeki derin su sal tankı
+Statik çözelti kültüründe bitkiler cam kavanoz, kap, kova, küvet veya tank gibi besin çözeltisi konulan çeşitli kaplarda yetiştirilir. Çözelti genellikle hafifçe havalandırılır ancak havalandırılmamış da olabilir. Havalandırılmamışsa yeterli oksijeni elde etmek için çözeltinin üzerinde yeterli kök olacak kadar çözelti seviyesi az tutulur. Her bitki için rezervuarın üstünde bir delik açılır; kap kavanoz veya küvetse kapağı olabilir aksi takdirde karton, folyo, kağıt, ahşap veya metal üstüne konabilir.
+
+Tek bir rezervuar, tek bir bitkiye veya çeşitli bitkilere ayrılabilir. Rezervuar büyüklüğü bitki büyüklüğü arttıkça arttırılır. Bir akvaryum pompası, akvaryum hava hortumu ve akvaryum vanaları tarafından sağlanan havalandırma ile gıda kabı veya cam konserve kavanozundadan ev yapımı bir sistem yapılabilir.
+
+Şeffaf kaplar ışığı önlemek için alüminyum folyo, kasap kağıdı, siyah plastik veya başka bir malzeme ile kaplanır ve böylece yosun oluşumu önlenir. Haftada bir kez gibi veya besin çözeltisinin konsantrasyon değeri elektriksel iletkenlik ölçerle belirlenen belirli bir seviyenin altına indiğinde besin çözeltisi değiştirilir. Çözelti belirli seviyenin altına düştüğünde su veya taze besin çözeltisi eklenir.
+
+Çözelti seviyesini otomatik olarak korumak için bir Mariotte şişesi veya şamandıra valfi kullanılabilir.
+
+Sal çözelti kültüründe bitkiler besin çözeltisinin yüzeyinde yüzen plastik tabakaya yerleştirilir. Bu şekilde, çözelti seviyesi asla köklerin altına düşmez.
+
+Sürekli akışlı solüsyon kültürü
+
+Çeşitli salata yeşillikleri yetiştirmek için kullanılan besin filmi tekniği (NFT)
+Sürekli akışlı çözelti kültüründe, besin çözeltisi köklerden sürekli olarak akar. Otomatikleştirmek statik çözüm kültüründen daha kolaydır, çünkü örnekleme ve sıcaklık, pH ve besin konsantrasyonlarında ayarlama binlerce tesise hizmet etme potansiyeline sahip büyük bir depolama tankında yapılabilir.[5] Popüler bir tür besin filmi tekniği veya kısaca NFT'dir ki burada bitki büyümesi için gerekli tüm çözünmüş besin maddelerini içeren çok sığ bir su akışı kanalın dibinde gelişen su geçirmez kalın bir kök mattaki bitkilerin çıplak köklerinden geçerek yeniden dolaşır ve mat nemli olmasına rağmen havayla temas eden bir üst yüzeyi vardır. Bunu takiben bitkilerin köklerine bol miktarda oksijen sağlanır. Düzgün tasarlanmış bir NFT sistemi doğru kanal eğimini, doğru akış hızını ve doğru kanal uzunluğunu kullanmaya dayanır. NFT sisteminin diğer hidroponik uygulamalara göre yararı bitki köklerinin yeterli su, oksijen ve besin maddelerine maruz kalmasıdır. Diğer tüm üretim şekillerinde bu gereksinimlerin sağlanması arasında bir çelişki vardır, çünkü birinin aşırı veya eksik miktarları diğerlerinden birinin veya her ikisinin dengesizliğine neden olur. NFT tasarımı nedeniyle, basit NFT kavramının her zaman hatırlanması ve uygulanması şartıyla sağlıklı bitki büyümesi için her üç gereksinimin de aynı anda karşılanabileceği bir sistem sağlar. Bu yararların sonucu uzun hasat süresince yüksek kaliteli ürün veriminin alınmasıdır. NFT'nin bir kötü yanı akıştaki kesintilere (örneğin elektrik kesintileri) karşı çok az dayanabilmesidir. Ancak genelde muhtemelen daha üretken tekniklerden biridir. Aynı tasarım özellikleri tüm geleneksel NFT sistemleri için geçerlidir. 1: 100 eğimli kanallar önerilmiş olmakla birlikte pratikte, besin filmlerinin yerel olarak depresif bölgelerde birikmeden akmasını sağlamak için yeterince doğru kanallar için bir taban oluşturmak zordur. Sonuçta 1:30 ila 1:40 eğimlerin kullanılması önerilir.[6] Bu, yüzeyde küçük düzensizliklere izin verir ancak bu eğimlerde bile göllenme ve su basması olalir. Eğim zemin tarafından sağlanabilir banklar veya raflar kanalları tutabilir ve gerekli eğimi sağlayabilir. Her iki yöntem de kullanılır ve genellikle alan ve ürün ihtiyaçlarınca belirlenen yerel gereksinimlere bağlıdır. Genel bir kılavuz olarak her kanal için debi dakikada bir litre olmalıdır.[7] Dikimde oranlar bunun yarısı olabilir ve maksimum 2 litre/dak üst sınırı görünür. Bu aşırılıkların ötesindeki debi genellikle beslenme sorunları ile ilişkilidir. Kanal boyu 12 metreyi aştığında birçok mahsulün sorunlu büyüme oranları gözlemlenmiştir. Hızla büyüyen ürünlerde testler kanal boyunca oksijen seviyeleri yeterli kalırken azotun tükenebildiğini göstermiştir. Sonuç olarak kanal uzunluğu 10-15 metreyi geçmemelidir. Bunun mümkün olmadığı durumlarda su yolu boyunca yarısına başka besin beslemesi yerleştirilerek ve her çıkıştan debinin yarıya indirilmesiyle büyümede azalma önlenebilir.
+
+Aeroponik
+Aeroponik, (sis veya sprey) şeklindeki besin çözeltisinin küçük damlalarıyla köklerin doyduğu bir ortamda bitkinin sürekli veya kesintili olarak tutulduğu bir sistemdir. Yöntem hiçbir substrat gerektirmez ve kökleri derin bir havada veya büyüme odasında asılı duran bitkilerin büyümesini gerektirir ve kökler periyodik olarak ince atomize besin sisiyle ıslatılır. Mükemmel havalandırma aeroponinin ana avantajıdır.
+
+
+Bir aeroponik diagram
+Aeroponik tekniklerin bitki çoğaltma, tohumun çimlenmesi, patates tohumu üretimi, domates üretimi, yaprak bitkiler ve mikro yeşillikler için ticari olarak başarılı olduğu kanıtlanmıştır.[8] Mucit Richard Stoner 1983'te aeroponik teknolojiyi ticarileştirdiğinden beri dünya çapında su yoğun hidroponik sistemlere bir alternatif olarak aeroponik uygulanmaktadır.
