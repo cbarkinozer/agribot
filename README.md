@@ -6,7 +6,7 @@ Agribot has many functions with their possible questions defined.
 Local running (on CPU) multilanguage LLM decides which of the defined function is similar to the question.  
 
 ### Architecture Design
-![architecture](test_folders\agribot_architecture.png)
+![architecture](test_folders/agribot_architecture.png)
 
 # TODO
 * Add a memory that is a queue with 5 last messages.   
