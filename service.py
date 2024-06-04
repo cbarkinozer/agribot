@@ -120,7 +120,7 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
         else:
             return "I couldn't understand your request. Can you try expressing your request in a different way?", 400
 
-    print(max_similarity_function)
+    print(f"[DEBUG] Selected Function: {max_similarity_function}")
 
     if max_similarity_function == "weather":
         answer = await _weather()
@@ -131,7 +131,57 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     else:
         return "Routed Function Name Exception", 500
     
-    return answer, 200
+    system_message = """
+    Sen tarımla alakalı insanlara yardımcı olan bir sohbet asistanısın.
+    Senin görevin kullanıcının sana sorduğu sorulara sana verilen bilgileri kullanarak cevap vermek.
+    Cevaplarının tonu dostane ve nötrdür.
+    Cevabının en az birkaç cümle olmalıdır.
+    Sana verilen bilgilerin dışında bilgiler kullanma.
+    <Örnek 1>:
+    <Human>:
+    <Soru>:
+    Mahsül alamıyorum, ekinlerim ölüyor. Sorun ne olabilir?
+    <Bilgi>:
+    Maalesef hastalıklar konusunda yardımcı olamıyoruz. Lütfen bir uzmana danışın.
+    <AI>:
+    Bu durumun birçok farklı nedeni olabilir.
+    Maalesef hastalıklar konusunda size yardımcı olamıyorum.
+    Bu konuda bir uzmana danışmanızı öneririm.
+    Uzman, ekinlerinizin durumunu yerinde değerlendirerek en doğru teşhisi koyup size uygun çözümler sunacaktır.
+
+    <Örnek 2>:
+    <Human>:
+    <Soru>:
+    Yağmur ne zaman yağacak tarlam çok kurudu?
+    <Bilgi>:
+    Hava durumu parçalı bulutlu 30°C, Yağış: 0%, Nem: 28%, Rüzgar: 18 km/s
+    <AI>:
+    Maalesef, mevcut hava durumu bilgilerine göre yağmur beklenmiyor.
+    Hava parçalı bulutlu, sıcaklık 30°C, nem oranı %28 ve rüzgar hızı 18 km/s.
+    Bu koşullarda yağış olasılığı %0 görünüyor.
+    Tarlanızı sulamak için alternatif yöntemler düşünmeniz gerekebilir.
+    Yakın zamanda bir yağış tahmini almak için hava durumu raporlarını düzenli olarak kontrol etmekte fayda var.
+
+    <Örnek 3>:
+    <Human>:
+    <Soru>:
+    Nasıl topraksız tarım yapabilirim?
+    <Bilgi>:
+    Metinde böyle bir bilgi bulunmamaktadır.
+    <AI>:
+    Maalesef, elimdeki bilgilerde bu sorunuzun cevabı bulunmuyor.
+    İsterseniz sorunuzu farklı bir şekilde dile getirin belki o şekilde istediğiniz bilgiyle alakalı kısmı sizin için bulabilirim.
+
+    Şimdi sıra sende:
+    """
+
+    chat = ChatGoogleGenerativeAI(model=user.llm, temperature=0, max_output_tokens=256, top_k = 40, top_p = 0.8)
+    final_answer = chat.invoke(f" Sistem Mesajı: {system_message} <Soru>: {question} <Bilgi>: {answer}")
+    final_answer = final_answer.content
+
+    await _log(user=user, question=question, system_message=system_message, selected_function= max_similarity_function, answer= answer, final_answer = final_answer)
+
+    return final_answer, 200
 
 async def _weather() -> str:
     return "Hava durumu parçalı bulutlu 30°C, Yağış: 0%, Nem: 28%, Rüzgar: 18 km/s"
@@ -139,7 +189,7 @@ async def _weather() -> str:
 async def _sickness() -> str:
     return "Maalesef hastalıklar konusunda yardımcı olamıyoruz. Lütfen bir uzmana danışın."
 
-async def _rag(user: User, question: str, api_key: str) -> any:
+async def _rag(user: User, question: str, api_key: str) -> tuple[str, int]:
     vector_store = await _get_vector_file(user.username)
     if vector_store is None:
         return "Document not found.", 400
@@ -161,8 +211,8 @@ async def _rag(user: User, question: str, api_key: str) -> any:
     except Exception:
         return "Wrong API key.", 400
     answer = response.content + "  **<Most Related Chunk>**  " + retrieved_chunks
-    await _log(user=user, question=question, system_message=system_message, answer = response.content, retrieved_chunks=retrieved_chunks)
-    return answer
+    print(f"[DEBUG] RAG Results: {answer}")
+    return answer, 200
 
 
 async def _get_vector_file(username: str)-> any:
@@ -170,14 +220,14 @@ async def _get_vector_file(username: str)-> any:
         vector_store = pickle.load(f)
     return vector_store
 
-async def _log(user: User, question: str, system_message: str, answer: str, retrieved_chunks:str = None):
+async def _log(user: User, question: str, system_message: str, selected_function: str, answer: str, final_answer: str) -> None:
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     username = user.username
     llm = user.llm
     embedder = user.embedder
 
-    log_message = f"{timestamp}, Username: {username}, Question: {question}, LLM: {llm}, Embedder: {embedder}, System Message: {system_message}, Retrieved Texts: {retrieved_chunks}, Answer: {answer}\n"
+    log_message = f"\n{timestamp}, Username: {username}, Question: {question}, LLM: {llm}, Embedder: {embedder}, System Message: {system_message}, Selected Function: {selected_function}, Answer: {answer}, Final Answer: {final_answer}\n"
     with open("log.txt", "a", encoding="utf-8") as file:
-        file.write("--------------------------------------------------------------")
+        file.write("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         file.write(log_message)
-        file.write("--------------------------------------------------------------")
+        file.write("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")

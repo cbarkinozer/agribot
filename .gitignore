@@ -3,3 +3,5 @@ agribot/*
 encoder/*
 __pycache__
 *.pkl
+log.txt
+*.drawio
