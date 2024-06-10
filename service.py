@@ -19,12 +19,15 @@ from langdetect import detect
 from sentence_transformers import SentenceTransformer
 import torch
 
+USER_STORE = {}
+
 
 async def upload_documents(user: User, files: list[UploadFile]) -> tuple[str, int]:
     text = await _extract_text_from_document(files)
     chunks = await _chunk_text(text)
     await _create_embeddings_and_save(user, chunks)
     return "Document is uploaded successfully.", 200
+
 
 async def _extract_text_from_document(files: list[UploadFile]) -> str:
     text = ""
@@ -45,6 +48,7 @@ async def _extract_text_from_document(files: list[UploadFile]) -> str:
                 text += paragraph.text + "\n"
     return text
 
+
 async def _chunk_text(text: str) -> list[str]:
     chunks = None
     text_splitter = CharacterTextSplitter(
@@ -55,6 +59,7 @@ async def _chunk_text(text: str) -> list[str]:
     )
     chunks = text_splitter.split_text(text)
     return chunks
+
 
 async def _create_embeddings_and_save(user: User, chunks: any) -> FAISS:
     embeddings = HuggingFaceEmbeddings(model_name=user.embedder)
@@ -94,8 +99,11 @@ functions = {
     }
 }
 
-async def ask_question(user: User, question: str, api_key: str) -> tuple[str, int]:
+
+async def ask_question(user: User, question: str, api_key: str) -> tuple[str, int]: 
     
+    user = await _get_saved_user(user)
+
     encoder = models["encoder"]
     question_embedding = encoder.encode(question)
     request_language = detect(question)
@@ -117,7 +125,7 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     max_similarity = max(similarities.values())
     max_similarity_function = max(similarities, key=similarities.get)
 
-    if max_similarity < 0.3:
+    if max_similarity < 0.2:
         if request_language=="tr":
             return "İsteğinizi anlayamadım. İsteğinizi farklı bir şekilde ifade etmeyi deneyebilir misiniz?", 400
         else:
@@ -146,6 +154,7 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     Mahsül alamıyorum, ekinlerim ölüyor. Sorun ne olabilir?
     <Bilgi>:
     Maalesef hastalıklar konusunda yardımcı olamıyoruz. Lütfen bir uzmana danışın.
+    <Hafıza>:
     <AI>:
     Bu durumun birçok farklı nedeni olabilir.
     Maalesef hastalıklar konusunda size yardımcı olamıyorum.
@@ -158,6 +167,7 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     Yağmur ne zaman yağacak tarlam çok kurudu?
     <Bilgi>:
     Hava durumu parçalı bulutlu 30°C, Yağış: 0%, Nem: 28%, Rüzgar: 18 km/s
+    <Hafıza>:
     <AI>:
     Maalesef, mevcut hava durumu bilgilerine göre yağmur beklenmiyor.
     Hava parçalı bulutlu, sıcaklık 30°C, nem oranı %28 ve rüzgar hızı 18 km/s.
@@ -171,26 +181,41 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     Nasıl topraksız tarım yapabilirim?
     <Bilgi>:
     Metinde böyle bir bilgi bulunmamaktadır.
+    <Hafıza>:
+
     <AI>:
     Maalesef, elimdeki bilgilerde bu sorunuzun cevabı bulunmuyor.
     İsterseniz sorunuzu farklı bir şekilde dile getirin belki o şekilde istediğiniz bilgiyle alakalı kısmı sizin için bulabilirim.
 
     Şimdi sıra sende:
     """
+    memory = user.memory.get_memory()
 
     llm = await _get_llm(model_name=user.llm)
-    final_answer = llm.invoke(f" Sistem Mesajı: {system_message} <Soru>: {question} <Bilgi>: {answer}")
+    prompt = f" Sistem Mesajı: {system_message} <Soru>: {question} <Bilgi>: {answer} <Hafıza>: {memory}"
+    print("[DEBUG] Memory: ",memory)
+    final_answer = llm.invoke(prompt)
     final_answer = final_answer.content
-
-    await _log(user=user, question=question, system_message=system_message, selected_function= max_similarity_function, answer= answer, final_answer = final_answer)
+    user.memory.save(question=question, answer=final_answer)
+    await _log(user=user, memory=memory, question=question, system_message=system_message, selected_function= max_similarity_function, answer= answer, final_answer = final_answer)
 
     return final_answer, 200
+
+async def _get_saved_user(user: User) -> User:
+    if user.username in USER_STORE:
+        return USER_STORE[user.username]
+    else:
+        USER_STORE[user.username] = user
+        return user
+
 
 async def _weather() -> str:
     return "Hava durumu parçalı bulutlu 30°C, Yağış: 0%, Nem: 28%, Rüzgar: 18 km/s"
 
+
 async def _sickness() -> str:
     return "Maalesef hastalıklar konusunda yardımcı olamıyoruz. Lütfen bir uzmana danışın."
+
 
 async def _rag(user: User, question: str, api_key: str) -> tuple[str, int]:
     vector_store = await _get_vector_file(user.username)
@@ -217,6 +242,7 @@ async def _rag(user: User, question: str, api_key: str) -> tuple[str, int]:
     print(f"[DEBUG] RAG Results: {answer}")
     return answer, 200
 
+
 async def _get_llm(model_name:str):
     if model_name == "openai":
         OPENAI_KEY = os.getenv("OPENAI_KEY")
@@ -234,7 +260,6 @@ async def _get_llm(model_name:str):
     else:
         GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
         llm = ChatGoogleGenerativeAI(google_api_key=GOOGLE_API_KEY,model="gemini-pro")
-    
     return llm
 
 
@@ -243,13 +268,14 @@ async def _get_vector_file(username: str)-> any:
         vector_store = pickle.load(f)
     return vector_store
 
-async def _log(user: User, question: str, system_message: str, selected_function: str, answer: str, final_answer: str) -> None:
+
+async def _log(user: User, memory:str, question: str, system_message: str, selected_function: str, answer: str, final_answer: str) -> None:
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     username = user.username
     llm = user.llm
     embedder = user.embedder
 
-    log_message = f"\n{timestamp}, Username: {username}, Question: {question}, LLM: {llm}, Embedder: {embedder}, System Message: {system_message}, Selected Function: {selected_function}, Answer: {answer}, Final Answer: {final_answer}\n"
+    log_message = f"\n{timestamp}, Username: {username}, Memory: {memory}, Question: {question}, LLM: {llm}, Embedder: {embedder}, System Message: {system_message}, Selected Function: {selected_function}, Answer: {answer}, Final Answer: {final_answer}\n"
     with open("log.txt", "a", encoding="utf-8") as file:
         file.write("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         file.write(log_message)

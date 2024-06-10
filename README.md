@@ -9,6 +9,6 @@ Local running (on CPU) multilanguage LLM decides which of the defined function i
 ![architecture](test_folders/agribot_architecture.png)
 
 # TODO
-* Add a memory that is a queue with 5 last messages.   
+* Test the memory in detail  
 * Accuracy improvements (tuning hyperparameters, trying llamaindex as rag agent)    
 * Checking with Giskard for vulnerabilities because product is served directly to the end user.   
