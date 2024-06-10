@@ -7,6 +7,9 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import OpenAI
+from langchain_openai import AzureOpenAI
+from langchain_groq import ChatGroq
 import pickle
 from datetime import datetime
 import io
@@ -175,8 +178,8 @@ async def ask_question(user: User, question: str, api_key: str) -> tuple[str, in
     Şimdi sıra sende:
     """
 
-    chat = ChatGoogleGenerativeAI(model=user.llm, temperature=0, max_output_tokens=256, top_k = 40, top_p = 0.8)
-    final_answer = chat.invoke(f" Sistem Mesajı: {system_message} <Soru>: {question} <Bilgi>: {answer}")
+    llm = await _get_llm(model_name=user.llm)
+    final_answer = llm.invoke(f" Sistem Mesajı: {system_message} <Soru>: {question} <Bilgi>: {answer}")
     final_answer = final_answer.content
 
     await _log(user=user, question=question, system_message=system_message, selected_function= max_similarity_function, answer= answer, final_answer = final_answer)
@@ -200,8 +203,8 @@ async def _rag(user: User, question: str, api_key: str) -> tuple[str, int]:
         is_loaded = load_dotenv()
         if is_loaded == False:
             return "API key not found.", 400
-        
-    llm = ChatGoogleGenerativeAI(model=user.llm, temperature=0, max_output_tokens=256, top_k = 40, top_p = 0.8)
+    
+    llm = await _get_llm(model_name=user.llm)
     docs = vector_store.similarity_search(question)
     retrieved_chunks = docs[0].page_content + docs[1].page_content + docs[2].page_content
     system_message="Figure out the answer of the question by the given information pieces. ALWAYS answer with the language of the question."
@@ -213,6 +216,26 @@ async def _rag(user: User, question: str, api_key: str) -> tuple[str, int]:
     answer = response.content + "  **<Most Related Chunk>**  " + retrieved_chunks
     print(f"[DEBUG] RAG Results: {answer}")
     return answer, 200
+
+async def _get_llm(model_name:str):
+    if model_name == "openai":
+        OPENAI_KEY = os.getenv("OPENAI_KEY")
+        llm = OpenAI(api_key=OPENAI_KEY, model="gpt-3.5-turbo-instruct")
+    elif model_name == "azure_openai":
+        AZURE_AD_TOKEN = os.getenv("AZURE_AD_TOKEN")
+        AZURE_AD_TOKEN_PROVIDER = os.getenv("AZURE_AD_TOKEN_PROVIDER")
+        AZURE_DEPLOYMENT = os.getenv("AZURE_DEPLOYMENT")
+        AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
+        llm = AzureOpenAI(azure_ad_token=AZURE_AD_TOKEN, azure_ad_token_provider=AZURE_AD_TOKEN_PROVIDER, azure_deployment=AZURE_DEPLOYMENT, azure_endpoint=AZURE_ENDPOINT, model="gpt-3.5-turbo-instruct")
+    elif model_name == "llama3":
+        GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+        os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+        llm = ChatGroq(api_key=GROQ_API_KEY, model_name="llama3-70b-8192")
+    else:
+        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+        llm = ChatGoogleGenerativeAI(google_api_key=GOOGLE_API_KEY,model="gemini-pro")
+    
+    return llm
 
 
 async def _get_vector_file(username: str)-> any:

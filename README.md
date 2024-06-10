@@ -10,5 +10,5 @@ Local running (on CPU) multilanguage LLM decides which of the defined function i
 
 # TODO
 * Add a memory that is a queue with 5 last messages.   
-* Accuracy improvements (adding openai option, tuning hyperparameters, trying llamaindex as rag agent)    
+* Accuracy improvements (tuning hyperparameters, trying llamaindex as rag agent)    
 * Checking with Giskard for vulnerabilities because product is served directly to the end user.   
